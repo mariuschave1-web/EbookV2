@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>KOVA — Calisthenics Intelligence</title>
+  <meta name="description" content="KOVA — L'app calisthenics premium." />
+  <meta name="theme-color" content="#07060E" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='900' fill='%238B5CF6'>K</text></svg>" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; background: #000; font-family: -apple-system, 'SF Pro Display', 'SF Pro Rounded', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    #root { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    * { -webkit-tap-highlight-color: transparent; }
+    input, button, select { font-family: inherit; }
+    ::-webkit-scrollbar { width: 0; height: 0; }
+    input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; }
+    input::placeholder { color: #4B4870; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes slideUp { from { transform:translateY(100%); } to { transform:translateY(0); } }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    @keyframes checkPop { 0%{transform:scale(0);} 60%{transform:scale(1.3);} 100%{transform:scale(1);} }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <!-- Knowledge Base — source de vérité unique pour tous les mouvements -->
+  <script src="/movement_knowledge_base.js"></script>
+  <!-- Moteur de génération -->
+  <script src="/KOVA_ENGINE_V3.js" onerror="console.warn('[KOVA] Moteur non disponible — mode fallback actif')"></script>
+  <!-- Application -->
+  <script src="/app.js"></script>
+</body>
+</html>
